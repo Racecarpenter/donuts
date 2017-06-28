@@ -4,28 +4,28 @@ exports.seed = function(knex, Promise) {
     .then(function() {
       // Inserts seed entries
       return knex('donuts').insert([{
-          name: 1,
-          topping: 'Maple',
-          price: 2.50
+          name: 'Maple',
+          topping: 'Maple Frosting',
+          price: 3
         },
         {
-          name: 2,
-          topping: 'Sugar',
+          name: 'Sugar',
+          topping: 'Sugar covering',
           price: 2
         },
         {
-          name: 3,
-          topping: 'Cinnamon',
-          price: 2.75
+          name: 'Cinnamon',
+          topping: 'Cinnamon covering',
+          price: 2
         },
         {
-          name: 4,
-          topping: 'Jelly(filled)',
-          price: 3.50
+          name: 'Jelly',
+          topping: 'Jelly filling',
+          price: 3
         },
         {
-          name: 5,
-          topping: 'Glazed',
+          name: 'Glazed',
+          topping: 'Frosting',
           price: 2
         }
       ]);
