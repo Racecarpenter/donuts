@@ -12,9 +12,10 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/:id', function(req, res) {
-  knex.raw(`select * from shops where id=${req.params.id}`).then(function(shops) {
+  knex.raw(`select shops.name, shops.city from shops inner join employees on shops.id=employees.store_id where id=${req.params.id}`).then(function(shops) {
     res.render('shopsID', {
-      shops: shops.rows
+      shops: shops.rows,
+      employees: employees.rows
     });
   })
 })
