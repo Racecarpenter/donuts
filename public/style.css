@@ -8,6 +8,8 @@ body{
 .container {
   width: 100%;
   height: 100%;
+  background-image: url("http://www.qygjxz.com/data/out/69/5977134-donut-wallpaper.jpg");
+  background-color: yellow;
 }
 
 header {
@@ -42,14 +44,16 @@ header {
   float: top;
   margin: 0px auto;
   text-align: center;
-  overflow: scroll;
+  overflow-y: scroll;
   border: 2px solid black;
+  background-color: white;
 }
 
 .shop_list {
   height: 100%;
   width: 50%;
   margin: 0px auto;
+  text-align: center;
 }
 
 .shop_name {
@@ -57,10 +61,15 @@ header {
   padding-top: 20px;
   font-size: 40px;
   color: black;
+  width: 100%;
 }
 
 .shop_name a {
   color: black;
+  margin: 0px -27px;
+  background-color: red;
+  text-decoration: none;
+  width: 100%;
 }
 
 .shop_name a:visited {
@@ -71,7 +80,7 @@ header {
 .city {
   font-size: 15px;
   font-style: italic;
-  list-style-type: none;
+  width: 100%;
 }
 
 .bottom {
@@ -86,4 +95,22 @@ header {
   text-align: center;
   margin: 15px;
   font-family: monospace;
+}
+
+footer {
+  position: fixed;
+  bottom: 0px;
+  height: 30px;
+  background-color: red;
+  width: 100%;
+}
+
+.removeli {
+  list-style-type: none;
+}
+
+.back {
+  height: 20%;
+  width: 100%;
+  margin-bottom: 20px;
 }

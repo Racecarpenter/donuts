@@ -21,20 +21,25 @@
           <ul>
           <% for(var i = 0; i < shops.length; i++) { %>
         <li class="shop_name"><a href="/shops/<%=shops[i].id%>"><%= shops[i].name %></a>
-          <ul><li class="city"><%= shops[i].city %></li></ul>
+          <ul><li class="city"><%= shops[i].city %>
+              <form action="/shops/remove/<%= shops[i].id %>" method="post">
+              <button>Remove</button>
+              </form>
+              </li>
+          </ul>
           <% } %>
         </ul>
         </div>
       </div>
       <div class="bottom">
         <h3>ADD NEW STORE</h3>
-    <form action="/" method="post">
+    <form action="/shops/add" method="post">
       <p>Name: <input type="text" name="name"></p>
       <p>City: <input type="text" name="city"></p>
       <button type="submit">Add it</button>
     </form>
       </div>
     </div>
-
+<footer></footer>
   </body>
 </html>

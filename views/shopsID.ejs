@@ -18,10 +18,16 @@
         <%= shops[i].name %>
         <div class="city"><%= shops[i].city %></div>
       </div>
-
-
+      <div class="bottom">
+          <form action="/shops/edit/<%= shops[i].id %>" method="post">
+          <input type="text" name="name" placeholder="<%= shops[i].name %>">
+          <input type="text" name="city" placeholder="<%= shops[i].city %>">
+          <button>Update</button>
+          </form><br><br>
+          <a href="/shops"><button>Back to Shops</button></a>
+        </div>
           <% } %>
     </div>
-
+    <footer></footer>
   </body>
 </html>
