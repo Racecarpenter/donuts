@@ -20,7 +20,7 @@ exports.up = function(knex, Promise) {
       table.string('first_name');
       table.string('last_name');
       table.integer('favorite_donut').references('id').inTable('donuts');
-      table.integer('store').references('id').inTable('shops');
+      table.integer('store_id').references('id').inTable('shops');
     })
 };
 
