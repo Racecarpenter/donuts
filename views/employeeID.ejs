@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>DONuTsHOP</title>
+  </head>
+  <link rel="stylesheet" href="/style.css">
+  <body>
+    <div class="container">
+      <header>
+
+      </header>
+      <div class="info">
+        DONUTS
+      </div>
+      <% for(var i = 0; i < employees.length; i++) { %>
+      <div class="storeID">
+        <%= employees[i].first_name %>
+        <%= employees[i].last_name %>
+        <%= employees[i].favorite_donut %>
+      </div>
+      <div class="bottom">
+          <form action="/employees/edit/<%= employees[i].id %>" method="post">
+          <input type="text" name="first_name" placeholder="<%= employees[i].first_name %>">
+          <input type="text" name="last_name" placeholder="<%= employees[i].last_name %>">
+          <input type="text" name="favorite_donut" placeholder="<%= employees[i].favorite_donut %>">
+          <button>Update</button>
+          </form><br><br>
+          <a href="/shops"><button>Back to Shops</button></a>
+        </div>
+          <% } %>
+    </div>
+    <footer></footer>
+  </body>
+</html>
