@@ -6,6 +6,7 @@ var cors = require('cors');
 var logger = require('morgan');
 var knex = require('./db/knex');
 
+var index = require('./routes/indexRoutes');
 var shops = require('./routes/shopsRoutes');
 var donuts = require('./routes/donutsRoutes');
 var employees = require('./routes/employeesRoutes');
@@ -23,6 +24,7 @@ app.use(bodyParser.urlencoded({
   extended: false
 }));
 
+app.use('/', index);
 app.use('/shops', shops);
 app.use('/donuts', donuts);
 app.use('/employees', employees);

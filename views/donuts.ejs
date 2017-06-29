@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>DONuTsHOP</title>
+  </head>
+  <link rel="stylesheet" href="/style.css">
+  <body>
+    <div class="container">
+      <header>
+
+      </header>
+      <div class="info">
+        DONUTS
+      </div>
+      <div class="locations">
+        Donuts:<br>
+        <a href="/shops"><button>Back to Shop</button></a>
+      </div>
+      <div class="top">
+        <div class="shop_list">
+
+          <% for(var i = 0; i < donuts.length; i++) { %>
+            <ul>
+            <li class="city">
+          <a href="/donuts/<%= donuts[i].id%>"><%= donuts[i].donuts_name %></a>
+          </li>
+          </ul>
+          <% } %>
+          <br>
+        </div>
+      </div>
+      <div class="bottom">
+        <h3>ADD NEW DONUT</h3>
+    <form action="/donuts/add" method="post">
+      <p>Name: <input type="text" name="donuts_name"></p>
+      <p>Topping: <input type="text" name="topping"></p>
+      <p>Price: <input type="number" name="price"><button type="submit">Add it</button></p>
+    </form>
+    <br>
+      </div>
+<footer></footer>
+</div>
+  </body>
+</html>

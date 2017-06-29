@@ -23,16 +23,19 @@
           <input type="text" name="name" placeholder="<%= shops[i].name %>">
           <input type="text" name="city" placeholder="<%= shops[i].city %>">
           <button>Update</button>
-          </form><br><br>
-          <%}%>
-        </div>
-        <% for(var j = 0; j < employees.length; j++) { %>
-          <h3>Employees at Location</h3>
-          <ul>
-            <li><%=employees[j].last_name%>,<%=employees[j].first_name%></li>
-            </ul>
-        <a href="/shops"><button>Back to Shops</button></a>
+          </form>
+          <br>
+          <br>
+        <a href="/donuts">
+        <button>Donuts</button></a>
+        <a href="/employees">
+        <button>Employees</button></a>
+        <br>
+        <a href="/shops">
+        <button>Back to Shops</button>
+        </a>
       <%}%>
+      </div>
     <footer></footer>
     </div>
   </body>

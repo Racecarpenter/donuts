@@ -3,9 +3,11 @@ var router = express.Router();
 var knex = require('../db/knex');
 
 /* GET home page. */
-router.get('/:id', function(req, res, next) {
-  knex.raw(`SELECT * from employees where id='${req.body.id}'`).then(function(employees) {
-    res.render('/employeeID', {
+
+
+router.get('/', function(req, res, next) {
+  knex.raw(`SELECT * from employees`).then(function(employees) {
+    res.render('employees', {
       employees: employees.rows
     })
   });

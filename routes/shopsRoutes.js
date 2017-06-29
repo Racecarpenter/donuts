@@ -17,11 +17,6 @@ router.get('/:id', function(req, res) {
       shops: shops.rows
     });
   })
-  knex.raw(`select * from employees where store_id=${req.params.id}`).then(function(shops) {
-    res.render('shopsID', {
-      employees: employees.rows
-    });
-  })
 })
 
 router.post('/edit/:id', function(req, res) {
