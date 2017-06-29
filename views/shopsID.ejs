@@ -27,15 +27,12 @@
           <%}%>
         </div>
         <% for(var j = 0; j < employees.length; j++) { %>
-        <% if(shops[i].id===employees[j].id) { %>
           <h3>Employees at Location</h3>
           <ul>
             <li><%=employees[j].last_name%>,<%=employees[j].first_name%></li>
             </ul>
         <a href="/shops"><button>Back to Shops</button></a>
-      </div>
       <%}%>
-    <%}%>
     <footer></footer>
     </div>
   </body>
