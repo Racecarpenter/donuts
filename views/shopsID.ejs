@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>DONuTsHOP</title>
+  </head>
+  <link rel="stylesheet" href="/style.css">
+  <body>
+    <div class="container">
+      <header>
+
+      </header>
+      <div class="info">
+        DONUTS
+      </div>
+      <% for(var i = 0; i < shops.length; i++) { %>
+      <div class="storeID">
+        <%= shops[i].name %>
+        <div class="city"><%= shops[i].city %></div>
+      </div>
+
+
+          <% } %>
+    </div>
+
+  </body>
+</html>

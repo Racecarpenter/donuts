@@ -5,19 +5,19 @@ exports.seed = function(knex, Promise) {
       // Inserts seed entries
       return knex('shops').insert([{
           name: 'Roundys',
-          city: 'Fat'
+          city: 'Fat, USA'
         },
         {
           name: 'Cloggys',
-          city: 'Obese Beach'
+          city: 'Obese Beach, USA'
         },
         {
           name: 'Fattys',
-          city: 'New Butt City'
+          city: 'New Butt City, USA'
         },
         {
           name: 'Slappys',
-          city: 'Lardville'
+          city: 'Lardville, USA'
         }
       ]);
     });

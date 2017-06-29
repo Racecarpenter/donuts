@@ -6,8 +6,9 @@ var cors = require('cors');
 var logger = require('morgan');
 var knex = require('./db/knex');
 
-var index = require('./routes/indexRoutes');
-var shops = require('./routes/shops');
+var shops = require('./routes/shopsRoutes');
+var donuts = require('./routes/donutsRoutes');
+var employees = require('./routes/employeesRoutes');
 
 var app = express();
 
@@ -16,13 +17,15 @@ app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(cors());
-app.use(bodyParser.json())
+app.use(bodyParser.json());
+app.use(express.static('public'));
 app.use(bodyParser.urlencoded({
   extended: false
 }));
 
-app.use('/', index);
 app.use('/shops', shops);
+app.use('/donuts', donuts);
+app.use('/employees', employees);
 
 app.listen(port, function() {
   console.log("listening on port: ", port);
