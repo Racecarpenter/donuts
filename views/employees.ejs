@@ -13,16 +13,16 @@
       <div class="info">
         DONUTS
       </div>
-
+      <div class="employees">
+      Employees
       <% for(var i = 0; i < employees.length; i++) { %>
-        <div class="employees">
-        Employees
         <h3>First Name:</h3><%= employees[i].first_name %>
         <h3>Last Name:</h3><%= employees[i].last_name %>
         <h3>Favorite Donut:</h3><%= employees[i].favorite_donut %>
-
+        </div>
       <div class="bottom">
-          <form action="/employees/edit/<%= employees[i].id %>" method="post">
+      <br>
+          <form action="/employees/edit/<%=employees[i].id%>" method="post">
           <input type="text" name="first_name" placeholder="<%= employees[i].first_name %>">
           <input type="text" name="last_name" placeholder="<%= employees[i].last_name %>">
           <input type="text" name="favorite_donut" placeholder="<%= employees[i].favorite_donut %>">
